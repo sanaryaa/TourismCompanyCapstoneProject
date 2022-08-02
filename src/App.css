@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Splash&display=swap');
 
 @font-face {
     font-family: 'rudaw';
@@ -9,5 +10,8 @@
   .rudaw-font{
     font-family: 'rudaw';
     
+  }
+  .eng-font{
+    font-family: 'Raleway', sans-serif;
   }
  

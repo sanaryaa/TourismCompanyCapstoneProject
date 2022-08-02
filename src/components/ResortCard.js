@@ -57,7 +57,7 @@ export default function ResortCard() {
           </button>
         </div>
       </div>
-      <div className="w-[22%] h-[67%] border-8 border-border absolute left-[65%] top-[115%] "></div>
+      <div className="w-[22%] h-[67%] border-8 border-white absolute left-[65%] top-[115%] "></div>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import HotelCard from "./components/HotelCard"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ResturantCard from "./components/ResturantCard";
 import About from './components/About.js'
+import FooterSec from "./components/FooterSec";
 function App() {
   return (
     <>
@@ -24,8 +25,11 @@ function App() {
       <div className="w-full h-[90vh] mt-[5%]">
         <ResturantCard/>
       </div>
-      <div className="w-full h-[70vh] bg-tree">
-        <App />
+      <div className="w-full h-[30vh] mt-[2%] ">
+        <About />
+      </div>
+      <div className="w-full h-[60vh]">
+        <FooterSec/>
       </div>
     </>
   );

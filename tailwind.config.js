@@ -10,10 +10,13 @@ module.exports = {
         'purple':'#C9BBCF',
         'green':'#1F441E',
         'rgba':'rgba(249, 243, 238,0.3)',
-        'black-rgba':'rgba(0,0,0,0.5)',
+        'black-rgba':'rgba(0,0,0,0.4)',
         'border':'rgb(204, 214, 166,0.9)',
         'bluesky':'rgb(211, 228, 205,0.5)',
-        'whitee':'rgb(211, 235, 205,0.5)'
+        'whitee':'rgb(211, 235, 205,0.5)',
+        'nature':'#C4DFAA',
+        'blue':'#C3DBD9',
+        'bluetox':'#3F4E4F'
       },
       backgroundImage:{
 
@@ -32,13 +35,7 @@ module.exports = {
         // Simple 16 column grid
         '22': 'repeat(2, minmax(0, 3fr))',
       },
-      boxShadow: {
-        'blackk': '5px 5px 3px #F1F1F1,-5px -5px 3px #F1F1F1 ',
-        'left-shadow':'0 5px 7px black',
-      },
-      
     },
   },
   plugins: [],
 }
-

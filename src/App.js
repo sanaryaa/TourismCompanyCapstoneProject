@@ -1,35 +1,28 @@
 import Navigation from "./components/Navigation";
 import "./App.css";
-import Welcome from "./components/Welcome";
-import Myacount from "./components/Myacount";
-import ResortCard from "./components/ResortCard";
-import HotelCard from "./components/HotelCard"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ResturantCard from "./components/ResturantCard";
-import About from './components/About.js'
 import FooterSec from "./components/FooterSec";
+import { Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages/Home";
+import Resort from "./pages/Resort";
+import Hotel from "./pages/Hotel";
+import Restaurant from "./pages/Restaurant";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 function App() {
   return (
     <>
-      <div className="w-full h-screen bg-spring bg-no-repeat bg-center bg-100 flex items-center justify-end ">
-        <Navigation />
-        <Welcome />
-        <Myacount />
-      </div>
-      <div className="w-full h-screen mt-[1%] ">
-        <ResortCard/>
-      </div>
-      <div className="w-full h-screen flex items-center justify-start">
-        <HotelCard/>
-      </div>
-      <div className="w-full h-[90vh] mt-[5%]">
-        <ResturantCard/>
-      </div>
-      <div className="w-full h-[30vh] mt-[2%] ">
-        <About />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Resort" element={<Resort />} />
+        <Route path="/Hotel" element={<Hotel />} />
+        <Route path="/Restaurant" element={<Restaurant />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
+
       <div className="w-full h-[60vh]">
-        <FooterSec/>
+        <FooterSec />
       </div>
     </>
   );

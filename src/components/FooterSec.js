@@ -1,8 +1,8 @@
-import tree from '../img/tree.png'
+import seabg from '../img/sea.png'
 export default function FooterSec() {
   return (
-    <div className="w-full h-full ">
-      <div className="w-[70%] h-[65%] flex items-center justify-center mt-[5%]">
+    <div className="w-full h-[70%] ">
+      <div className="w-[70%] h-[65%] flex items-center justify-center  mt-[5%]">
         <nav className="w-[30%] h-full flex flex-col justify-center items-center">
           <h5 className="rudaw-font text-lg hover:text-xl w-full h-12 flex flex-col justify-center items-center">
             ماڵەوە
@@ -33,7 +33,7 @@ export default function FooterSec() {
       <div className="w-full h-[20%] flex items-center justify-center mt-[5%]">
         <h5 className="eng-font text-[15px]">2022 ©</h5>
       </div>
-      <img src={tree} className="absolute w-[45%] right-[55%] top-[435%]"/>
+      {/* <img src={sea} className="h-[30%] w-full"/> */}
     </div>
   );
 }

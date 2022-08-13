@@ -13,6 +13,7 @@ module.exports = {
         nature: "#C4DFAA",
         blue: "#C3DBD9",
         bluetox: "#3F4E4F",
+        greentox:'#377D71'
       },
       backgroundImage: {
         bluebg:

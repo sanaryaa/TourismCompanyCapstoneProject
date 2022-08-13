@@ -78,200 +78,262 @@ import sirwan1 from "../img/sirwan1.jpg";
 import sirwan2 from "../img/sirwan2.jpg";
 import taqtaq1 from "../img/taqtaq1.jpg";
 import taqtaq2 from "../img/taqtaq2.jpg";
-
 import chamirezan1 from "../img/chamirezan1.jpg";
 import chamirezan2 from "../img/chamirezan2.jpg";
 import Navigation from "../components/Navigation";
-import { delimiter } from "../util/limit";
-const resort = [
+import {delimiter} from '../util/limit'
+import Filter from '../components/Fitler'
+import Modal from 'react-modal';
+import { useState } from "react";
+export const resort = [
   {
-    location: "گۆمی فێڵاو",
+    name: "گۆمی فێڵاو",
     description:
       "گۆمی فێڵاو نۆ کیلۆمەتر لە باشووری قەزای چۆمان دوورە. بەو پێیەی گۆمەکە دەکەوێتە بەرامبەر چیای حەساری سەکران، ئەو چیایەی لە چوار وەرزی ساڵ بەفری تێدا دەمێنێتەوە و جوانیێکی دڵڕفێنی بە ناوچەکە بەخشیوە.",
     img: [gomifelaw1, gomifelaw2],
+    location:'hawler',
+    rait:'3.5'
   },
   {
-    location: "ڕەواندز",
+    name: "ڕەواندز",
     description:
       "ڕەواندز شارێکە کە دەکەوێتە پارێزگای ھەولێر، عێراق،قەزایەکە چواردەورە کراوە بە چیاوە، چیای کۆڕەک لە باشوورییەوە، چیای ھەندرێن لە باکوورییەوە، چیای زۆزیک لە ڕۆژئاوایەوە و چیای برادۆست لە ژۆژھەڵاتییەوە.",
     img: [rawanduz1, rawanduz2, rawanduz3, rawanduz4, rawanduz5, rawanduz6],
+    location:'hawler',
+    rait:'4'
   },
   {
-    location: "ئاکرێ",
+    name: "ئاکرێ",
     description:
       "ئاکرێ شارۆچکەیەکی باشووری کوردستانە و سەر بە پارێزگای دھۆکە،ەنێوان سێ چیادایە، خانووەکانی لەسەر یەک بەداوێنی شاخەکاندا ھەڵچوون. ئەمە دیمەنێکی جوان و سەرنجڕاکێشی بە شارەکە بەخشیوە",
     img: [akre1, akre2, akre3],
+    location:'dhok',
+    rait:'5'
   },
   {
-    location: "گۆڵێ",
+    name: "گۆڵێ",
     description:
       "گۆڵێ گوندێکە، کەوتووەتە ناحیەی گەرمک لەقەزای پێنجوێن سەر بە پارێزگای سلێمانی",
     img: [golle1, golle2],
+    location:'slemani',
+    rait:'4'
   },
   {
-    location: "ئامێدی",
+    name: "ئامێدی",
     description:
       "ئامێدی شارۆچکەیەکی سەر بە پارێزگای دهۆک. کە کەوتووەتە سەر تاشەبەردێکی زۆر گەورەی سەر شاخێک",
     img: [amedi1, amedi2, amedi3, amedi4],
+    location:'dhok',
+    rait:'3'
   },
   {
-    location: "چەمی ڕێزان",
+    name: "چەمی ڕێزان",
     description: " سەر بە قەزای دۆكانی سنووری پارێزگای سلێمانییە",
-    img: [chamirezan1, chamirezan2],
+    img: [chamirezan1],
+    location:'slemani',
+    rait:'4'
   },
   {
-    location: "بێخاڵ",
+    name: "بێخاڵ",
     description:
       "اڤگەی بێخاڵ‌ دەکەوێتە قەزای ڕەواندز لە پارێزگای ھەولێر، ١١٢ کم لە چەقی ھەولێرەوە دوورە، دەکەوێتە ڕۆژھەڵاتی تاڤگەی گەلی عەلی بەگ. دەتوانین بگەین بە بێخاڵ لە ڕێگای گەلی عەلی بەگ یان لە ڕێگای ڕەواندز.",
     img: [bexal1, bexal2, bexal3, bexal4, bexal5],
+    location:'hawler',
+    rait:'4.5'
   },
 
   {
-    location: "دەربەندیخان",
+    name: "دەربەندیخان",
     description:
       "شارۆچکەیەکە کەوتووەتە باشوری ڕۆژهەڵاتی پارێزگای سلێمانی، لە ڕوی گەشتوگوزارەوە گرنگییەکی تایبەتی ھەیە بەھۆی بەنداوی دەربەندیخان، دواتر بەھۆی تونێلی دەربەندیخانەوە گەشتوگوزار زیاتر گەشەی کردووە.",
     img: [darbandixan1, darbandixan2],
+    location:'slemani',
+    rait:'4'
   },
   {
-    location: "دۆلی بالیسان",
+    name: "دۆلی بالیسان",
     description:
       "ناحیەی بالیسان، دەکەوێتە رۆژئاوای شاری سلێمانی، و سەر بە پارێزگای ھەولێرە",
     img: [dolibalisan1, dolibalisan2, dolibalisan3],
+    location:'hawler',
+    rait:'4'
   },
   {
-    location: "دۆڵی ئالان",
+    name: "دۆڵی ئالان",
     description:
       "ئەم شوێنە نزیكەی 15 کیلۆمەتر لە باشووری خۆرهەڵاتی شارۆچكەی خەلیفان دوورە و لەسەر رێگای نێوان خەلیفان - بالیسانە و رووباری ئالانەی پێدا دەڕوات",
     img: [dolialan1, dolialan2, dollialan3],
+    location:'hawler',
+    rait:'3'
   },
   {
-    location: "دووکان",
+    name: "دووکان",
     description:
       "قەزای دوکان یەکێکە لە قەزای پارێزگای سلێمانی لە باشوری کوردستان لە ڕوی گەشت و گوزارەوە بەھۆی دەریاچە یاخود بەنداوی دوکان و ھەڵکەوتە جوگرافی و کەش و ھەوایەکەوە. ",
     img: [dukan1, dukan2],
+    location:'slemani',
+    rait:'4'
   },
   {
-    location: "تابین",
+    name: "تابین",
     description: "هاوینەهەواری تەنگی تابین سەر بە شارۆچکەی دوکان ",
     img: [tabin1, tabin2, tabin3],
+    location:'slemani',
+    rait:'3.5'
   },
   {
-    location: "گەلی عەلی بەگ",
+    name: "گەلی عەلی بەگ",
     description:
       "یەکێکە لە تاڤگەکانی باشووری کوردستان. ناوچەیەکی گەشت و گوزاریییە و چەندین سەردانکەر لە شارەکانی ترەوە بەتایبەت باشووری عێراقەوەسەردانی دەکەن سەر بە یارێزگای هەولێرە",
     img: [galialibag1, galialibag2, galialibag3],
+    location:'hawler',
+    rait:'4'
   },
   {
-    location: "گۆمی بێکۆدیان",
+    name: "گۆمی بێکۆدیان",
     description:
       "گۆمی بێکۆدیان دەکەوێتە پارێزگای هەولێر سنوری باڵەکایەتی لە قەزای چۆمان لە زنجیرە چیاکانی زاگرۆس لە سەر چیای حەساری سەکران ",
     img: [gomibekodian1, gomibekodian2],
+    location:'hawler',
+    rait:'5'
   },
 
   {
-    location: "قەسرێ",
+    name: "قەسرێ",
     description: "قەسرێ یەکێکە لە ناحیەکانی قەزای چۆمان، لە پارێزگای ھەولێر",
     img: [qasre1, qasre2],
+    location:'hawler',
+    rait:'3'
   },
   {
-    location: "پردی دەلال",
+    name: "پردی دەلال",
     description:
       "پردی دەلال پردێکی کۆن و مێژوویییە دەکەوێتە ڕۆژھەڵاتی شارۆچکەی زاخۆ.ئەوانەی سەردانی پردەکە دەکەن زۆرینەیان گەشتیارن و بەمەبەستی وێنەگرتن لەپاڵی سەردانی دەکەن.",
     img: [prdidalal1, prdidalal2],
+    location:'dhok',
+    rait:'4'
   },
   {
-    location: "قاداوا",
+    name: "قاداوا",
     description: "قاداوا سەر بە ناحیەی سەنگەسەر -قەڵادزێ -پارێزگای سلێمانی",
     img: [qadawa1, qadawa2],
+    location:'slemani',
+    rait:'5'
   },
   {
-    location: "سیروان",
+    name: "سیروان",
     description:
       "ناحیەی سیروان یەکێکە لە شوێنە گەشتیارەکانی سەر بە پارێزگای هەڵەبجە ،کە بە هۆی بوونی بەنداوی سیروانەوە ساڵانە گەشتیار سەردانی دەکات",
     img: [sirwan1, sirwan2],
+    location:'slemani',
+    rait:'3.4'
   },
 
   {
-    location: "سەرتەکی بەمۆ",
+    name: "سەرتەکی بەمۆ",
     description:
       "سەیرانگای سەرتەکی بەمۆ، دەکەوێتە بناری شاخی بەمۆ، بەهۆی کەشوهەوا گونجاوەکەی و دڵگیریی سروشتی ناوچەکە، ساڵانە گەشتیارێکی زۆر ڕوو لەو سەیرانگایە دەکەن.,سەر بەقەزای خانەقینە",
     img: [sartakibamo1, sartakibamo2],
+    location:'slemani',
+    rait:'5'
   },
   // {
-  //     'location':'رێکان',
+  //     'name':'رێکان',
   //     'description':,
   //     'img1':rekan1,
   //     'img2':rekan2,
   // },
   {
-    location: "شارباژێر",
+    name: "شارباژێر",
     description:
       "ناوچەیەکی پارێزگای سلێمانییە کەوتۆتە باکوری ڕۆژهەڵاتییەوە. لەڕووی ئیدارییەوە لە قەزای چوارتا",
     img: [sharbazher1, sharbazher2],
+    location:'slemani',
+    rait:'3'
   },
   {
-    location: "سۆلاڤ",
+    name: "سۆلاڤ",
     description:
       "سۆلاڤ هاوینگەیەکە بەدووری 4کم دەکەوێتە باکووری ڕۆژئاوای شارۆچکەی ئامێدی، لەناو دۆڵێکدایە کە بەدار و درەخت دەورە دراوە، ئاوێکی سازگار لەبناری چیاوە هەڵدەقوڵێ بەناو سۆلاڤ شۆڕدەبێتەوە بۆناو باخچەکانی ئامێدی دەڕوات.",
     img: [solav1, solav2, solav3, solav4, solav5, solav6],
+    location:'dhok',
+    rait:'3.25'
   },
   {
-    location: "شیلادزێ",
+    name: "شیلادزێ",
     description:
       "ناحیا شێلادزێ دکەڤیتە ڕۆژهەلاتێ قەزا ئامێدی سەر ب پارێزگەها دهۆکێ",
     img: [sheladze1, sheladze2, sheladze3, sheladze4, sheladze5],
+    location:'dhok',
+    rait:'4.5'
   },
   {
-    location: "کانی ماران",
+    name: "کانی ماران",
     description:
       "گوندێکە، کەوتووەتە ناحیەی حاجیاوا، قەزای ڕانیە، پارێزگای سلێمانی، باشووری کوردستان",
     img: [kanimaran1, kanimaran2],
+    location:'slemani',
+    rait:'2.5'
   },
   {
-    location: "تونی بابا",
+    name: "تونی بابا",
     description:
       "ئەم دۆڵە جوانە سەرسوڕهێنەرێکی سروشتی ڕاستەقینەیە دەکەوێتە نێوان شاری دەربەندیخان و شاری کەلار و بە شێوەیەکی سروشتی بە ئاو و با دروستکراوە.",
     img: [tunibaba1, tunibaba2],
+    location:'slemani',
+    rait:'4'
   },
   {
-    location: "تەق تەق",
+    name: "تەق تەق",
     description:
       "تەق تەق شارۆچکەیەکی خنجیلانەیە سەر بە قەزای کۆیە کەوتۆتە لای ڕاستی زێی بچووک",
     img: [taqtaq1, taqtaq2],
+    location:'hawler',
+    rait:'3.75'
   },
   {
-    location: "کانی ڕەش",
+    name: "کانی ڕەش",
     description:
       "یەکێکە لە تاڤگە جوان و دڵگیرەکانی کوردستان لە بناری بێکۆدیانو پرژێ و دەڤەری باڵەکایەتی",
     img: [kanirash1, kanirash2],
+    location:'hawler',
+    rait:'4'
   },
   {
-    location: "دەربەندی رانیە",
+    name: "دەربەندی رانیە",
     description:
       "دەربەندی ڕانیە کەوتووەتە ئیدارەی ڕاپەڕین. لە ڕووی ئیدارییەوە سەر بە ناحیەی سەنگەسەرە لە قەزای پشدەر، پارێزگای سلێمانی، باشووری کوردستان",
     img: [darbandirania1, darbandirania2, darbandirania3],
+    location:'slemani',
+    rait:'3.5'
   },
 ];
 export default function Resort() {
+  let subtitle;
+  const [modalIsOpen, setIsOpen] =useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    subtitle.style.color = '#f00';
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <div className="w-full h-[100%] flex flex-col items-center justify-center ">
-      <div className="w-full h-[5%]">
         <Navigation />
-      </div>
-      <div className="h-[25%] w-[80%]">
-        <select className="w-[20%] h-full bg-[#395B64] text-white text-[20px] rudaw-font text-center rounded-md">
-        <option value="slemani">هەمووی</option>
-          <option value="slemani" className="">سلێمانی</option>
-          <option value="hawler">‌هەولێر</option>
-          <option value="dhok">دهۆک</option>
-        </select>
-      </div>
-      <div className="w-[80%] h-[60%] justify-items-center  grid grid-cols-3 gap-2 mt-[4%]">
+      <Filter/>
+      <div className="w-[80%] h-[100%] justify-items-center  grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-[4%]">
         {resort.map((resort) => {
           return (
-            <div className="w-[70%] h-full flex flex-col rounded-lg border border-[#F0EBE3]">
-              <div className="w-full h-[90%] ">
-                <Carousel className="w-full ">
+            <div className="w-[70%]  flex flex-col rounded-lg border border-[#F0EBE3] shadow-md" onClick={openModal}>
+              <div className="w-full h-[80%] ">
+                <Carousel className="w-full h-full " >
                   {resort.img.map((img) => {
                     return (
                       <Carousel.Item>
@@ -285,19 +347,28 @@ export default function Resort() {
                   })}
                 </Carousel>
               </div>
-              <div className="w-full h-[60%]  p-[4%] mt-[2%]">
-                <h2 className="rudaw-font text-[20px]">{resort.location}</h2>
+              <div className="w-full h-[40%]  p-[4%] mt-[2%]">
+                <h2 className="rudaw-font text-[20px]">{resort.name}</h2>
                 <p className="rudaw-font text-[#69787d]">
                   {delimiter(resort.description, 55)}
                 </p>
-                <button className="w-[35%] h-[28%] bg-slate-500 flex items-center justify-center rounded-lg">
-                  <img src="https://img.icons8.com/ios/30/000000/marker--v1.png" />
+               <div className="w-full h-[40%] flex items-center justify-between">
+               <button className="rudaw-font w-[70%] h-[50%] bg-green text-white flex items-center justify-center rounded-lg">
+                  لەسەرنەخشە
                 </button>
+               </div>
               </div>
             </div>
           );
         })}
       </div>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+      >
+        <button onClick={closeModal}>داخستن</button>
+      </Modal>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import Hotel from "./pages/Hotel";
 import Restaurant from "./pages/Restaurant";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+
 function App() {
   return (
     <>

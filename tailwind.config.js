@@ -22,6 +22,9 @@ module.exports = {
           'url("https://images.ctfassets.net/3s5io6mnxfqz/AUWonAVxQhoFqxggae3eR/80c49fc106c3c57c1d78610f1fd1a1f6/bird-s-eye-view-of-pine-trees-3312678.jpg")',
         sea: 'url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2VhJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&w=1000&q=80")',
         tree: 'url("https://cdn.britannica.com/26/152026-050-41D137DE/Sunshine-leaves-beech-tree.jpg")',
+
+        'bg1':'url("./img/bg1.png")',
+        
       },
       backgroundSize: {
         100: "100%",

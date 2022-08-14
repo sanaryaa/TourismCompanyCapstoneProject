@@ -82,9 +82,9 @@ import chamirezan1 from "../img/chamirezan1.jpg";
 import chamirezan2 from "../img/chamirezan2.jpg";
 import Navigation from "../components/Navigation";
 import {delimiter} from '../util/limit'
-import Filter from '../components/Fitler'
 import Modal from 'react-modal';
-import { useState } from "react";
+import {useState} from 'react'
+import Filter from '../components/Filter'
 export const resort = [
   {
     name: "گۆمی فێڵاو",
@@ -308,7 +308,15 @@ export const resort = [
     rait:'3.5'
   },
 ];
+
 export default function Resort() {
+  //to filter the card
+  // let filterResult=resort.filter(result);
+  // function result(govrenment){
+  //   if(govrenment!='all')
+  // return resort.location==govrenment
+  // }
+  // modal 
   let subtitle;
   const [modalIsOpen, setIsOpen] =useState(false);
 
@@ -326,8 +334,10 @@ export default function Resort() {
 
   return (
     <div className="w-full h-[100%] flex flex-col items-center justify-center ">
-        <Navigation />
-      <Filter/>
+      <div className="w-full h-[5%]">
+      <Navigation />
+      </div>
+     
       <div className="w-[80%] h-[100%] justify-items-center  grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-[4%]">
         {resort.map((resort) => {
           return (

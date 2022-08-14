@@ -21,10 +21,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
-
-      <div className="w-full h-[60vh]">
         <FooterSec />
-      </div>
     </>
   );
 }

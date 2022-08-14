@@ -38,7 +38,7 @@ module.exports = {
         22: "repeat(2, minmax(0, 3fr))",
       },
       dropShadow: {
-        resortCard: ["3px 3px 5px #A5C9CA"],
+       innerShadow:'0px 10px 5px black inset'
       },
     },
   },

@@ -37,6 +37,7 @@ const customStyles = {
   content: {
    width:'5%',
    height:'full',
+   
   },
   overlay:{
     background:'rgba(0,0,0,0.4)'
@@ -60,11 +61,11 @@ function Navigation() {
   }
 
   return (
-    <div className="w-[85%] h-full mx-auto flex">
-      <div className="w-[50%] h-full flex items-center justify-start">
+    <div className="w-[85%] h-full mx-auto flex items-center justify-center">
+      <div className="w-[50%] h-full flex items-center justify-start ">
         <button onClick={openModal}><img src="https://img.icons8.com/ios-glyphs/35/000000/menu--v1.png"/></button>
       </div>
-      <div className="w-[50%] h-full flex items-center justify-end">
+      <div className="w-[50%] h-full flex items-center justify-end ">
         <img src={logo} className="w-20 h-20 " />
       </div>
 
@@ -80,7 +81,7 @@ function Navigation() {
             return (
               <Link
                 to={page.path}
-                className="no-underline  text-black rudaw-font text-[20px] w-full h-[20%] flex  justify-center items-center"
+                className="no-underline w-full h-[20%] flex  justify-center items-center"
               >
                 <img src={page.page}/>
               </Link>

@@ -20,7 +20,7 @@ export default function () {
       <h4 className=" mt-[35%] mr-[15%] rudaw-font w-[60%] text-[35px]  text-white leading-[2.5rem]">
           با چێژ لە پشووەکانمان وەربگرین!
         </h4>
-        <button className='w-[25%] mr-[15%] mt-[5%] h-[5%] backdrop-blur bg-[#80558C] rudaw-font rounded-md'><Link to="/Resort" className="no-underline text-white text-[20px]">زیاتر ببینە</Link></button>
+        <button className='w-[25%] mr-[15%] mt-[5%] h-[5%] backdrop-blur bg-[#80558C] rudaw-font rounded-3xl hover:bg-[#8c6297] '><Link to="/Resort" className="no-underline text-white text-[20px]">زیاتر ببینە</Link></button>
       </div>
     </div>
     </div>

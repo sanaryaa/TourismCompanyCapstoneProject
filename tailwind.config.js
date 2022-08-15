@@ -24,7 +24,7 @@ module.exports = {
         tree: 'url("https://cdn.britannica.com/26/152026-050-41D137DE/Sunshine-leaves-beech-tree.jpg")',
 
         'bg1':'url("./img/bnaryshaxykosrat2.jpg")',
-        'bg2':'url("https://images.pexels.com/photos/2583890/pexels-photo-2583890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")'
+        'bg2':'url("https://images.pexels.com/photos/11924650/pexels-photo-11924650.jpeg?auto=compress&cs=tinysrgb&w=600")'
         
       },
       backgroundSize: {

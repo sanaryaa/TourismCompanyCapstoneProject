@@ -28,6 +28,13 @@ const icons=[
   {
     img:'https://img.icons8.com/ios/30/000000/service-bell.png',
   },
+  {
+    img:'https://img.icons8.com/ios/30/000000/trust--v1.png',
+  },
+  {
+    img:'https://img.icons8.com/ios/30/000000/security-checked.png',
+  },
+ 
 ]
 
 export default function StartSec() {

@@ -23,7 +23,8 @@ module.exports = {
         sea: 'url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2VhJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&w=1000&q=80")',
         tree: 'url("https://cdn.britannica.com/26/152026-050-41D137DE/Sunshine-leaves-beech-tree.jpg")',
 
-        'bg1':'url("./img/bg1.png")',
+        'bg1':'url("./img/bnaryshaxykosrat2.jpg")',
+        'bg2':'url("https://images.pexels.com/photos/2583890/pexels-photo-2583890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")'
         
       },
       backgroundSize: {

@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import { Dropdown } from "rsuite";
 import Modal from 'react-modal';
 import {useState} from 'react'
-import { borderRadius, color } from "@mui/system";
 
 const pages = [
   {
@@ -77,9 +76,10 @@ function Navigation() {
       >
         <button onClick={closeModal}><img src="https://img.icons8.com/ios-glyphs/25/000000/delete-sign.png"/></button>
         <nav className="w-full flex items-center flex-col justify-center h-[60%] ">
-          {pages.map((page) => {
+          {pages.map((page,index) => {
             return (
               <Link
+              key={index}
                 to={page.path}
                 className="no-underline w-full h-[20%] flex  justify-center items-center"
               >

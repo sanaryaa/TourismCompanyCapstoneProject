@@ -1,6 +1,7 @@
 import Filter from "../components/Filter";
 import Navigation from "../components/Navigation";
 import ResortCard from "../components/ResortCard";
+// import ResortCard from "../components/ResortCard";
 
 export default function Resort() {
   return (
@@ -8,8 +9,7 @@ export default function Resort() {
       <div className="w-full h-[5%] ">
         <Navigation />
       </div>
-      <Filter/>
-      <ResortCard />
+      <Filter />
     </div>
   );
 }

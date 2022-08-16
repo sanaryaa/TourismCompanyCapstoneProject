@@ -1,4 +1,4 @@
-import Navigation from "./components/Navigation";
+
 import "./App.css";
 import FooterSec from "./components/FooterSec";
 import { Routes, Route } from "react-router-dom";
@@ -16,10 +16,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Resort" element={<Resort />} />
-        <Route path="/Hotel" element={<Hotel />} />
+        {/* <Route path="/Hotel" element={<Hotel />} />
         <Route path="/Restaurant" element={<Restaurant />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Contact" element={<Contact />} /> */}
       </Routes>
         <FooterSec />
     </>

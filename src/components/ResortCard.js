@@ -1,10 +1,12 @@
 import Carousel from "react-bootstrap/Carousel";
 import { delimiter } from "../util/limit";
 import Modal from "react-modal";
-import React, {useState } from "react";
-import { filtering } from "../util/filtering";
+import React, { useState, useContext } from "react";
+import { Context } from "./Filter";
 
-export default function () {
+export default function ResortCard() {
+  const data = useContext(Context);
+
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -21,19 +23,21 @@ export default function () {
   }
 
   return (
-    <div className="w-[80%] h-[100%] justify-items-center  grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-[4%]">
-      {filtering.map((filtering) => {
+    <div className="w-[85%] h-[100%] justify-items-center  grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-[2%]">
+      {data.map((item, index) => {
         return (
           <div
-            className="w-[70%]  flex flex-col rounded-lg border border-[#F0EBE3] shadow-md"
+            key={index}
+            className="w-[70%] border-[0px] flex flex-col rounded-lg  shadow-md"
             onClick={openModal}
           >
             <div className="w-full h-[80%] ">
               <Carousel className="w-full h-full ">
-                {filtering.img.map((img) => {
+                {item.img.map((img, index) => {
                   return (
                     <Carousel.Item>
                       <img
+                        key={index}
                         className="d-block w-100 rounded-tl-lg rounded-tr-lg"
                         src={img}
                         alt="First slide"
@@ -44,9 +48,9 @@ export default function () {
               </Carousel>
             </div>
             <div className="w-full h-[40%]  p-[4%] mt-[2%]">
-              <h2 className="rudaw-font text-[20px]">{filtering.name}</h2>
+              <h2 className="rudaw-font text-[20px]">{item.name}</h2>
               <p className="rudaw-font text-[#69787d]">
-                {delimiter(filtering.description, 55)}
+                {delimiter(item.description, 55)}
               </p>
               <div className="w-full h-[40%] flex items-center justify-between">
                 <button className="rudaw-font w-[70%] h-[50%] bg-green text-white flex items-center justify-center rounded-lg">

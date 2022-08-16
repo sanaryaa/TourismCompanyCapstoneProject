@@ -2,8 +2,7 @@ import React from "react";
 import rawanduz from "../img/rawanduz1.jpg";
 import toranj from "../img/toranj1.jpg";
 import rotana from "../img/rotana.jpg";
-import { Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 
 
 const content = [
@@ -41,7 +40,7 @@ export default function StartSec() {
   return (
     <div className="w-[85%] h-[60%] mx-auto ">
       <div className="w-full h-[20%] flex items-center justify-center ">
-      <input  className="w-[70%] text-black h-[15%] p-[2.5%]  focus:outline-none border-b-[1px] border-black" placeHolder="گەڕان.."/>
+      <input  className="w-[70%] text-black h-[15%] p-[2.5%]  focus:outline-none border-[1px] border-black rounded-3xl" icon="search" placeHolder="گەڕان.."/>
       </div>
       <div className="w-full h-[20%] flex items-center justify-around">
         {icons.map((icon)=>{
@@ -50,7 +49,7 @@ export default function StartSec() {
           </div>
         })}
       </div>
-      <div className="w-full h-[60%] flex items-center justify-around">
+      <div className="w-full h-[70%] flex items-center justify-around border border-black">
         {content.map((content) => {
           return (
           <div className="card border-0 w-[30%] h-full mt-[0] hover:mt-[1%]">

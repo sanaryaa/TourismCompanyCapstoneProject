@@ -12,7 +12,6 @@ export default function () {
           <Navigation />
         </div>
         <StartSec />
-        <ContactSec />
       </div>
       <div className="w-[40%] h-full bg-white">
         <div className=" w-full h-full bg-bg1 bg-no-repeat bg-cover bg-bottom rounded-tr-[10%] rounded-br-[10%]">
@@ -20,7 +19,7 @@ export default function () {
             <h4 className=" mt-[35%] mr-[15%] rudaw-font w-[60%] text-[35px]  text-white leading-[2.5rem]">
               با چێژ لە پشووەکانمان وەربگرین!
             </h4>
-            <button className="w-[25%] mr-[15%] mt-[5%] h-[5%] backdrop-blur bg-[#80558C] rudaw-font rounded-3xl hover:bg-[#80558C] ">
+            <button className="w-[25%] mr-[15%] mt-[5%] h-[5%] backdrop-blur bg-[#80558C] rudaw-font rounded-3xl hover:bg-[#9a7da1]">
               <Link
                 to="/Resort"
                 className="no-underline text-white text-[20px]"

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function () {
   return (
-    <div className='w-full h-[10%] flex items-center justify-center '>
+    <div className='w-full h-full flex items-center justify-center'>
         <div className='w-[30%] border-b-2 border-black'></div>
         <div className="h-full w-[30%] flex items-center justify-center ">
         <img

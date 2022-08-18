@@ -36,11 +36,9 @@ module.exports = {
         // Simple 16 column grid
         22: "repeat(2, minmax(0, 3fr))",
       },
-      dropShadow: {
-        innerShadow:[
-          '-5px -5px 1px black'
-        ,'5px 5px 1px white']
-      },
+     boxShadow:{
+      insetShadow:'0 2px 4px 0 rgb(0 0 0 / 0.2) inset '
+     }
     },
   },
   plugins: [],

@@ -87,7 +87,7 @@ const resort = [
     img: [gomifelaw1, gomifelaw2],
     location: "hawler",
     rait: "3.5",
-    id:'1'
+    id: "1",
   },
   {
     name: "ڕەواندز",
@@ -96,7 +96,7 @@ const resort = [
     img: [rawanduz1, rawanduz2, rawanduz3, rawanduz4, rawanduz5, rawanduz6],
     location: "hawler",
     rait: "4",
-    id:'2'
+    id: "2",
   },
   {
     name: "ئاکرێ",
@@ -105,7 +105,7 @@ const resort = [
     img: [akre1, akre2, akre3],
     location: "dhok",
     rait: "5",
-    id:'3'
+    id: "3",
   },
   {
     name: "گۆڵێ",
@@ -114,7 +114,7 @@ const resort = [
     img: [golle1, golle2],
     location: "slemani",
     rait: "4",
-    id:'4'
+    id: "4",
   },
   {
     name: "ئامێدی",
@@ -123,7 +123,7 @@ const resort = [
     img: [amedi1, amedi2, amedi3, amedi4],
     location: "dhok",
     rait: "3",
-    id:'5'
+    id: "5",
   },
   {
     name: "چەمی ڕێزان",
@@ -131,7 +131,7 @@ const resort = [
     img: [chamirezan1],
     location: "slemani",
     rait: "4",
-    id:'6'
+    id: "6",
   },
   {
     name: "بێخاڵ",
@@ -140,7 +140,7 @@ const resort = [
     img: [bexal1, bexal2, bexal3, bexal4, bexal5],
     location: "hawler",
     rait: "4.5",
-    id:'7'
+    id: "7",
   },
 
   {
@@ -150,7 +150,7 @@ const resort = [
     img: [darbandixan1, darbandixan2],
     location: "slemani",
     rait: "4",
-    id:'8'
+    id: "8",
   },
   {
     name: "دۆلی بالیسان",
@@ -159,7 +159,7 @@ const resort = [
     img: [dolibalisan1, dolibalisan2, dolibalisan3],
     location: "hawler",
     rait: "4",
-    id:'9'
+    id: "9",
   },
   {
     name: "دۆڵی ئالان",
@@ -168,7 +168,7 @@ const resort = [
     img: [dolialan1, dolialan2, dollialan3],
     location: "hawler",
     rait: "3",
-    id:'10'
+    id: "10",
   },
   {
     name: "دووکان",
@@ -177,7 +177,7 @@ const resort = [
     img: [dukan1, dukan2],
     location: "slemani",
     rait: "4",
-    id:'11'
+    id: "11",
   },
   {
     name: "تابین",
@@ -185,7 +185,7 @@ const resort = [
     img: [tabin1, tabin2, tabin3],
     location: "slemani",
     rait: "3.5",
-    id:'12'
+    id: "12",
   },
   {
     name: "گەلی عەلی بەگ",
@@ -194,7 +194,7 @@ const resort = [
     img: [galialibag1, galialibag2, galialibag3],
     location: "hawler",
     rait: "4",
-    id:'13'
+    id: "13",
   },
   {
     name: "گۆمی بێکۆدیان",
@@ -203,7 +203,7 @@ const resort = [
     img: [gomibekodian1, gomibekodian2],
     location: "hawler",
     rait: "5",
-    id:'14'
+    id: "14",
   },
 
   {
@@ -212,7 +212,7 @@ const resort = [
     img: [qasre1, qasre2],
     location: "hawler",
     rait: "3",
-    id:'15'
+    id: "15",
   },
   {
     name: "پردی دەلال",
@@ -221,7 +221,7 @@ const resort = [
     img: [prdidalal1, prdidalal2],
     location: "dhok",
     rait: "4",
-    id:'16'
+    id: "16",
   },
   {
     name: "قاداوا",
@@ -229,7 +229,7 @@ const resort = [
     img: [qadawa1, qadawa2],
     location: "slemani",
     rait: "5",
-    id:'17'
+    id: "17",
   },
   {
     name: "سیروان",
@@ -238,7 +238,7 @@ const resort = [
     img: [sirwan1, sirwan2],
     location: "slemani",
     rait: "3.4",
-    id:'18'
+    id: "18",
   },
 
   {
@@ -248,7 +248,7 @@ const resort = [
     img: [sartakibamo1, sartakibamo2],
     location: "slemani",
     rait: "5",
-    id:'19'
+    id: "19",
   },
   {
     name: "شارباژێر",
@@ -257,7 +257,7 @@ const resort = [
     img: [sharbazher1, sharbazher2],
     location: "slemani",
     rait: "3",
-    id:'20'
+    id: "20",
   },
   {
     name: "سۆلاڤ",
@@ -266,7 +266,7 @@ const resort = [
     img: [solav1, solav2, solav3, solav4, solav5, solav6],
     location: "dhok",
     rait: "3.25",
-    id:'21'
+    id: "21",
   },
   {
     name: "شیلادزێ",
@@ -275,7 +275,7 @@ const resort = [
     img: [sheladze1, sheladze2, sheladze3, sheladze4, sheladze5],
     location: "dhok",
     rait: "4.5",
-    id:'22'
+    id: "22",
   },
   {
     name: "کانی ماران",
@@ -284,7 +284,7 @@ const resort = [
     img: [kanimaran1, kanimaran2],
     location: "slemani",
     rait: "2.5",
-    id:'23'
+    id: "23",
   },
   {
     name: "تونی بابا",
@@ -293,7 +293,7 @@ const resort = [
     img: [tunibaba1, tunibaba2],
     location: "slemani",
     rait: "4",
-    id:'24'
+    id: "24",
   },
   {
     name: "تەق تەق",
@@ -302,7 +302,7 @@ const resort = [
     img: [taqtaq1, taqtaq2],
     location: "hawler",
     rait: "3.75",
-    id:'25'
+    id: "25",
   },
   {
     name: "کانی ڕەش",
@@ -311,7 +311,7 @@ const resort = [
     img: [kanirash1, kanirash2],
     location: "hawler",
     rait: "4",
-    id:'26'
+    id: "26",
   },
   {
     name: "دەربەندی رانیە",
@@ -320,7 +320,7 @@ const resort = [
     img: [darbandirania1, darbandirania2, darbandirania3],
     location: "slemani",
     rait: "3.5",
-    id:'27'
+    id: "27",
   },
 ];
 
@@ -328,51 +328,32 @@ export const Context = createContext([]);
 
 export default function Filter() {
   const [data, setData] = useState(resort);
-  
+
   const filter = (button) => {
     if (button == "all") {
       setData(resort);
       return;
     }
-    
-    const filteredData = resort.filter((dataList) => dataList.location == button);
-      setData(filteredData);
+
+    const filteredData = resort.filter(
+      (dataList) => dataList.location == button
+    );
+    setData(filteredData);
   };
 
   return (
     <>
-      <div className="h-[25%] w-[80%] ">
-        <select className="w-[20%] h-full shadow-md text-black text-[20px] rudaw-font text-center rounded-md focus:outline-none focus:shadow-insetShadow">
-          <option
-            onClick={() => {
-              filter("all");
-            }}
-            
-          >
-            هەمووی
-          </option>
-          <option
-            onClick={() => {
-              filter("slemani");
-            }}
-          >
-            سلێمانی
-          </option>
-          <option
-            onClick={() => {
-              filter("hawler");
-            }}
-          >
-            ‌هەولێر
-          </option>
-          <option
-           value="dhok"
-            onChange={() => {
-              filter("dhok");
-            }}
-          >
-            دهۆک
-          </option>
+      <div className="h-[25%] w-[80%]  ">
+        <select
+          className="w-[20%] h-full shadow-md text-black text-[20px] rudaw-font text-center rounded-md focus:outline-none focus:shadow-insetShadow"
+          onChange={(e) => {
+            filter(e.target.value);
+          }}
+        >
+          <option value="all">هەمووی</option>
+          <option value="slemani">سلێمانی</option>
+          <option value="hawler">‌هەولێر</option>
+          <option value="dhok">دهۆک</option>
         </select>
       </div>
       <Context.Provider value={data}>

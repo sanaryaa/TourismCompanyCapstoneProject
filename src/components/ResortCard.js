@@ -1,31 +1,47 @@
 import Carousel from "react-bootstrap/Carousel";
 import { delimiter } from "../util/limit";
 import Modal from "react-modal";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Context } from "./Filter";
-
+import Rating from "react-rating"
 export default function ResortCard() {
   const data = useContext(Context);
-
+  const [selectItem, setSelect] = useState({});
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
+
+  const customStyle = {
+    content: {
+      width: "40vw",
+      background: "white",
+      marginRight:'25%',
+      marginLeft:'25%',
+      borderRadius:'20px'
+    },
+    overlay: {
+      background: "rgba(0,0,0,0.4)",
+    },
+  };
 
   function openModal() {
     setIsOpen(true);
   }
 
-  function afterOpenModal() {
-    subtitle.style.color = "#f00";
-  }
+ 
 
   function closeModal() {
     setIsOpen(false);
   }
-function handleEvent(){
-  openModal();
-  // e.preventDefault();
-  // alert(e.currentTarget.value)
-}
+  function handleEvent(itemId) {
+    openModal();
+
+    const filterData = data.filter((items, index) => {
+      return itemId == items.id;
+    });
+
+    setSelect(filterData[0]);
+    console.log(selectItem);
+  }
   return (
     <div className="w-[85%] h-[100%] justify-items-center  grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-[2%]">
       {data.map((item, index) => {
@@ -56,7 +72,13 @@ function handleEvent(){
                 {delimiter(item.description, 55)}
               </p>
               <div className="w-full h-[40%] flex items-center justify-between">
-                <button className="rudaw-font w-[30%] h-[60%] bg-green text-white flex items-center justify-center rounded-lg text-[20px]" onClick={handleEvent}>
+                <button
+                  value={item.id}
+                  className="rudaw-font w-[30%] h-[60%] bg-green text-white flex items-center justify-center rounded-lg text-[20px]"
+                  onClick={(e) => {
+                    handleEvent(e.target.value);
+                  }}
+                >
                   زیاتر..
                 </button>
               </div>
@@ -66,10 +88,20 @@ function handleEvent(){
       })}
       <Modal
         isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
+        style={customStyle}
       >
-        <button onClick={closeModal}>داخستن</button>
+        <button onClick={closeModal}>
+          <img src="https://img.icons8.com/ios/25/000000/delete-sign--v1.png" />
+        </button>
+        <div className="w-full h-[120vh] flex flex-col items-center justify-center">
+          <div className="w-[95%] h-[60%]  rounded-3xl bg-[#CFE8A9]"></div>
+          <div className="w-[95%] h-[35%] p-[5%]">
+           <h4 className="rudaw-font text-[25px]">{selectItem.name}</h4>
+           <p className="rudaw-font text-[17px] w-[75%] mt-[5%] text-[#73777B]">{selectItem.description}</p>
+           <Rating direction="rtl" initialRating={selectItem.rait} emptySymbol={<img src="https://img.icons8.com/color/25/000000/star--v1.png"/>} fullSymbol={<img src="https://img.icons8.com/fluency/25/000000/star.png"/>} readonly/>
+          </div>
+        </div>
       </Modal>
     </div>
   );

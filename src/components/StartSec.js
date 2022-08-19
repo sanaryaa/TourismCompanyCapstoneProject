@@ -56,7 +56,7 @@ export default function StartSec() {
             return(
               <div className="w-[45%] h-full rounded-lg ">
                 <img src={content.img} className=" h-full w-full object-contain rounded-lg  "/>
-                <button className="absolute top-[45%] bg-white w-[7%] h-[5%] rounded-tl-lg rounded-bl-lg"><Link to={content.path} className="no-underline text-black rudaw-font text-[18px]">زیاتر ببینە</Link></button>
+                <button className="absolute top-[45%] shadow-md  bg-white w-[7%] h-[5%] rounded-tl-lg rounded-bl-lg "><Link to={content.path} className="no-underline text-black rudaw-font text-[18px]">زیاتر ببینە</Link></button>
               </div>
             )
           })

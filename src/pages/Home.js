@@ -14,8 +14,8 @@ export default function () {
         <StartSec />
       </div>
       <div className=" md:hidden sm:hidden lg:block w-[40%] h-full bg-white">
-        <div className=" w-full h-full bg-bg1 bg-no-repeat bg-cover bg-bottom rounded-tr-[10%] rounded-br-[10%]">
-          <div className="w-full h-full rounded-tr-[10%] rounded-br-[10%] bg-black-rgba flex flex-col items-start">
+        <div className=" w-full h-full bg-bg1 bg-no-repeat bg-cover overflow-hidden bg-bottom rounded-tr-[10%] rounded-br-[10%]">
+          <div className="w-full h-full rounded-tr-[10%] rounded-br-[10%]  bg-black-rgba flex flex-col items-start">
             <h4 className=" mt-[35%] mr-[15%] rudaw-font w-[60%] text-[35px]  text-white leading-[2.5rem]">
               با چێژ لە پشووەکانمان وەربگرین!
             </h4>

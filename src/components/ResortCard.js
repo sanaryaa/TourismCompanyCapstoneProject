@@ -11,10 +11,8 @@ export default function ResortCard() {
   //all of the data
   const data = useContext(Context);
   //variable store that datas which is filtered
-  const [selectItem, setSelect] = useState({});
+  const [selectItem, setItem] = useState([]);
   const [imgs, setImgs] = useState([]);
-
-
 
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -23,7 +21,7 @@ export default function ResortCard() {
     content: {
       width: "75vw",
       background: "white",
-      marginRight: "9%",
+      marginRight: "5%",
       marginLeft: "5%",
       borderRadius: "20px",
     },
@@ -45,18 +43,14 @@ export default function ResortCard() {
     const filterData = data.filter((items, index) => {
       return itemId == items.id;
     });
+   setItem(filterData[0])
+   console.log(JSON.stringify(selectItem))
 
-    setSelect(filterData[0]);
-    console.log("filterData :",filterData)
-    console.log("selectItem:",JSON.stringify(selectItem))
-    // setImgs(selectItem.img)
-    
   }
-// if(!imgs){
-//   return <div>loading</div>
-// }
- 
- 
+  // if(!imgs){
+  //   return <div>loading</div>
+  // }
+
   return (
     <div className="w-full h-[100%] justify-items-center  grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-[2%] ">
       {data.map((item, index) => {
@@ -109,25 +103,26 @@ export default function ResortCard() {
         <button onClick={closeModal}>
           <img src="https://img.icons8.com/ios/25/000000/delete-sign--v1.png" />
         </button>
-        <div className="w-full h-[120vh] flex flex-col items-center justify-center">
-          <div className="w-[95%] h-[60%]  rounded-3xl bg-[#CFE8A9]">
-            {/* <Carousel className="w-full h-full ">
-              {imgs.map((img, index) => {
+        <div className="w-full lg:h-[120vh] md:h-[110vh] sm:h-[90%] flex flex-col items-center justify-center">
+          <div className="w-[95%] h-[60%]  rounded-3xl bg-white flex items-center justify-center">
+          {/* <div>{JSON.stringify(selectItem.img)}</div> */}
+            <Carousel className="lg:w-[40%] md:w-[50%] sm:w-[55%] ">
+              {selectItem.img.map((img, index) => {
                 return (
                   <Carousel.Item>
                     <img
                       key={index}
-                      className=" w-100 rounded-tl-lg rounded-tr-lg"
+                      className=" w-100 rounded-lg"
                       src={img}
                       alt="First slide"
                     />
                   </Carousel.Item>
                 );
               })}
-            </Carousel> */}
-            {/* <Map IP={data.long}/> */}
+            </Carousel>
+          
           </div>
-          <div className="w-[95%] h-[35%] p-[5%]">
+          <div className="w-[95%] h-[35%] p-[5%]  flex flex-col items-center justify-center text-center">
             <h4 className="rudaw-font text-[25px]">{selectItem.name}</h4>
             <p className="rudaw-font text-[17px] w-[75%] mt-[5%] text-[#73777B]">
               {selectItem.description}
@@ -143,6 +138,7 @@ export default function ResortCard() {
               }
               readonly
             />
+            <button className="flex items-center justify-center mt-[2%] rudaw-font rounded-3xl bg-lime-900 text-white lg:w-[20%] sm:w-[50%]  md:w-[35%] leading-8 lg:text-[20px] sm:text-[15px]">لەسەر نەخشە</button>
           </div>
         </div>
       </Modal>

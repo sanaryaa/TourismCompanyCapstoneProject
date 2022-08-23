@@ -9,7 +9,7 @@ import Hotel from "./pages/Hotel";
 import Restaurant from "./pages/Restaurant";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-
+import 'leaflet/dist/leaflet.css'
 function App() {
   return (
     <>

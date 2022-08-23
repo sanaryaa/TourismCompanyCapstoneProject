@@ -88,6 +88,7 @@ const resort = [
     location: "hawler",
     rait: "3.5",
     id: "1",
+    long:'36.62107296484547, 44.928616395678254'
   },
   {
     name: "ڕەواندز",
@@ -97,6 +98,7 @@ const resort = [
     location: "hawler",
     rait: "4",
     id: "2",
+    long:'36.60822372846324, 44.523768358384345'
   },
   {
     name: "ئاکرێ",
@@ -106,6 +108,7 @@ const resort = [
     location: "dhok",
     rait: "5",
     id: "3",
+    long:'36.74537859308823, 43.87514597412914'
   },
   {
     name: "گۆڵێ",
@@ -115,6 +118,7 @@ const resort = [
     location: "slemani",
     rait: "4",
     id: "4",
+    long:'35.776950144699015, 45.82645634168087'
   },
   {
     name: "ئامێدی",
@@ -124,6 +128,7 @@ const resort = [
     location: "dhok",
     rait: "3",
     id: "5",
+    long:'37.09415755614353, 43.48786366123484'
   },
   {
     name: "چەمی ڕێزان",
@@ -132,6 +137,7 @@ const resort = [
     location: "slemani",
     rait: "4",
     id: "6",
+    long:'35.79668713164455, 44.97500679935287'
   },
   {
     name: "بێخاڵ",
@@ -141,6 +147,7 @@ const resort = [
     location: "hawler",
     rait: "4.5",
     id: "7",
+    long:'36.61971469936444, 44.5078206766173'
   },
 
   {
@@ -151,6 +158,7 @@ const resort = [
     location: "slemani",
     rait: "4",
     id: "8",
+    long:'35.129753692128766, 45.72960377213029'
   },
   {
     name: "دۆلی بالیسان",
@@ -160,6 +168,7 @@ const resort = [
     location: "hawler",
     rait: "4",
     id: "9",
+    long:'36.19458978144785, 44.00918125235878'
   },
   {
     name: "دۆڵی ئالان",
@@ -169,6 +178,7 @@ const resort = [
     location: "hawler",
     rait: "3",
     id: "10",
+    long:'36.544521508943745, 44.44174889567584'
   },
   {
     name: "دووکان",
@@ -178,6 +188,7 @@ const resort = [
     location: "slemani",
     rait: "4",
     id: "11",
+    long:'35.94624743775997, 44.962434268671764'
   },
   {
     name: "تابین",
@@ -186,6 +197,7 @@ const resort = [
     location: "slemani",
     rait: "3.5",
     id: "12",
+    long:'35.94624743775997, 44.962434268671764'
   },
   {
     name: "گەلی عەلی بەگ",
@@ -195,6 +207,7 @@ const resort = [
     location: "hawler",
     rait: "4",
     id: "13",
+    long:''
   },
   {
     name: "گۆمی بێکۆدیان",
@@ -204,6 +217,7 @@ const resort = [
     location: "hawler",
     rait: "5",
     id: "14",
+    long:[36.546113285708834, 44.98070419567595]
   },
 
   {
@@ -213,6 +227,7 @@ const resort = [
     location: "hawler",
     rait: "3",
     id: "15",
+    long:[36.56226323390324, 44.83042176458933]
   },
   {
     name: "پردی دەلال",
@@ -222,14 +237,16 @@ const resort = [
     location: "dhok",
     rait: "4",
     id: "16",
+    long:[37.136401246856, 42.69468329754462]
   },
   {
-    name: "قاداوا",
-    description: "قاداوا سەر بە ناحیەی سەنگەسەر -قەڵادزێ -پارێزگای سلێمانی",
+    name: "قادراوا",
+    description: "قادراوا سەر بە ناحیەی سەنگەسەر -قەڵادزێ -پارێزگای سلێمانی",
     img: [qadawa1, qadawa2],
     location: "slemani",
     rait: "5",
     id: "17",
+    long:[35.73815302621196, 45.339354298124746]
   },
   {
     name: "سیروان",
@@ -239,6 +256,7 @@ const resort = [
     location: "slemani",
     rait: "3.4",
     id: "18",
+    long:[35.25122579596577, 45.939416827029135]
   },
 
   {
@@ -249,6 +267,7 @@ const resort = [
     location: "slemani",
     rait: "5",
     id: "19",
+    long:[34.947362150928484, 45.7384870583546]
   },
   {
     name: "شارباژێر",
@@ -258,6 +277,7 @@ const resort = [
     location: "slemani",
     rait: "3",
     id: "20",
+    long:[35.83820373340744, 45.502842252313755]
   },
   {
     name: "سۆلاڤ",
@@ -267,6 +287,7 @@ const resort = [
     location: "dhok",
     rait: "3.25",
     id: "21",
+    long:[37.101918525876485, 43.482516137988696]
   },
   {
     name: "شیلادزێ",
@@ -276,6 +297,7 @@ const resort = [
     location: "dhok",
     rait: "4.5",
     id: "22",
+    long:[37.03407120696368, 43.7444397285047]
   },
   {
     name: "کانی ماران",
@@ -285,6 +307,7 @@ const resort = [
     location: "slemani",
     rait: "2.5",
     id: "23",
+    long:[36.19590473123776, 44.747471342291874]
   },
   {
     name: "تونی بابا",
@@ -294,6 +317,7 @@ const resort = [
     location: "slemani",
     rait: "4",
     id: "24",
+    long:[35.055472311548144, 45.64008088341681]
   },
   {
     name: "تەق تەق",
@@ -303,6 +327,7 @@ const resort = [
     location: "hawler",
     rait: "3.75",
     id: "25",
+    long:[35.89419204792121, 44.59496485699934]
   },
   {
     name: "کانی ڕەش",
@@ -312,6 +337,7 @@ const resort = [
     location: "hawler",
     rait: "4",
     id: "26",
+    long:[35.89419204792121, 44.59496485699934]
   },
   {
     name: "دەربەندی رانیە",
@@ -321,11 +347,11 @@ const resort = [
     location: "slemani",
     rait: "3.5",
     id: "27",
+    long:[36.23959543379548, 44.88635766581768]
   },
 ];
 
 export const Context = createContext([]);
-
 export default function Filter() {
   const [data, setData] = useState(resort);
 
@@ -342,8 +368,8 @@ export default function Filter() {
   };
 
   return (
-    <>
-      <div className="h-[25%] w-[80%]  ">
+    <div className="h-full w-[85%] ">
+      <div className="h-[1%] w-full mt-[2%]">
         <select
           className="w-[20%] h-full shadow-md text-black text-[20px] rudaw-font text-center rounded-md focus:outline-none focus:shadow-insetShadow"
           onChange={(e) => {
@@ -356,9 +382,9 @@ export default function Filter() {
           <option value="dhok">دهۆک</option>
         </select>
       </div>
-      <Context.Provider value={data}>
+      <Context.Provider value={data} >
         <ResortCard />
       </Context.Provider>
-    </>
+    </div>
   );
 }

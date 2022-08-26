@@ -64,7 +64,7 @@ function Navigation() {
         </Drawer>
       </div>
       <div className="w-1/2 h-full flex items-center justify-end ">
-        <img src={logo} className="w-[20%] h-full" />
+        <img src={logo} className="w-[25%] h-full" />
       </div>
     </div>
   );

@@ -5,17 +5,17 @@ import React, { useState, useContext, useEffect } from "react";
 import { Context } from "./Filter";
 import Rating from "react-rating";
 import Map from "../components/Map";
-import { createContext } from "react";
+import Button from "@mui/material/Button";
 
 export default function ResortCard() {
   //all of the data
   const data = useContext(Context);
   //variable store that datas which is filtered
   const [selectItem, setItem] = useState([]);
-  const [imgs, setImgs] = useState([]);
 
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
+  
 
   const customStyle = {
     content: {
@@ -26,31 +26,29 @@ export default function ResortCard() {
       borderRadius: "20px",
     },
     overlay: {
-      background: "rgba(0,0,0,0.4)",
+      background: "rgba(255,255,255,0.3)",
     },
   };
 
+ //first Modal:
   function openModal() {
     setIsOpen(true);
   }
-
   function closeModal() {
     setIsOpen(false);
   }
+ 
   function handleEvent(itemId) {
     openModal();
 
-    const filterData = data.filter((items, index) => {
+    //datay aw itema waragre ka clicky lasar krawa
+    const selectData = data.filter((items, index) => {
       return itemId == items.id;
     });
-   setItem(filterData[0])
-   console.log(JSON.stringify(selectItem))
-
+    //selectItem arrayaka ka value selectData waragre u la line y 112 bakary ahenm bo away  pishan bdre la modalakaya
+    setItem(selectData[0]);
+    console.log(selectItem.toString());
   }
-  // if(!imgs){
-  //   return <div>loading</div>
-  // }
-
   return (
     <div className="w-full h-[100%] justify-items-center  grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-[2%] ">
       {data.map((item, index) => {
@@ -82,6 +80,7 @@ export default function ResortCard() {
               </p>
               <div className="w-full h-[40%] flex items-center justify-between">
                 <button
+                  variant="outlined"
                   value={item.id}
                   className="rudaw-font w-[30%] h-[60%] bg-black text-white flex items-center justify-center rounded-lg text-[20px]"
                   onClick={(e) => {
@@ -105,8 +104,8 @@ export default function ResortCard() {
         </button>
         <div className="w-full lg:h-[120vh] md:h-[110vh] sm:h-[90%] flex flex-col items-center justify-center">
           <div className="w-[95%] h-[60%]  rounded-3xl bg-white flex items-center justify-center">
-          {/* <div>{JSON.stringify(selectItem.img)}</div> */}
-            <Carousel className="lg:w-[40%] md:w-[50%] sm:w-[55%] ">
+            
+            {/* <Carousel className="lg:w-[40%] md:w-[50%] sm:w-[55%] ">
               {selectItem.img.map((img, index) => {
                 return (
                   <Carousel.Item>
@@ -119,7 +118,7 @@ export default function ResortCard() {
                   </Carousel.Item>
                 );
               })}
-            </Carousel>
+            </Carousel> */}
           
           </div>
           <div className="w-[95%] h-[35%] p-[5%]  flex flex-col items-center justify-center text-center">
@@ -138,7 +137,6 @@ export default function ResortCard() {
               }
               readonly
             />
-            <button className="flex items-center justify-center mt-[2%] rudaw-font rounded-3xl bg-lime-900 text-white lg:w-[20%] sm:w-[50%]  md:w-[35%] leading-8 lg:text-[20px] sm:text-[15px]">لەسەر نەخشە</button>
           </div>
         </div>
       </Modal>

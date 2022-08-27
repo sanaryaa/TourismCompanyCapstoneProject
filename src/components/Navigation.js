@@ -15,13 +15,10 @@ const pages = [
     path: "/Resort",
   },
   {
-    page: "https://img.icons8.com/ios-glyphs/27/000000/hotel-star.png",
+    page: "https://img.icons8.com/ios-filled/27/000000/travel-card.png",
     path: "/Hotel",
   },
-  {
-    page: "https://img.icons8.com/ios-glyphs/27/000000/restaurant.png",
-    path: "/Restaurant",
-  },
+  
   {
     page: "https://img.icons8.com/ios-glyphs/27/000000/about.png",
     path: "/About",
@@ -41,7 +38,7 @@ function Navigation() {
   };
 
   return (
-    <div className="w-[85%] h-full flex items-center justify-center border-2 border-black ">
+    <div className="w-[85%] h-full flex items-center justify-center  ">
       <div className="w-1/2 h-[10%] flex items-center justify-start  ">
         <button onClick={toggleDrawer}>
         <img src="https://img.icons8.com/material-rounded/30/000000/menu--v1.png"/>
@@ -64,7 +61,7 @@ function Navigation() {
         </Drawer>
       </div>
       <div className="w-1/2 h-full flex items-center justify-end ">
-        <img src={logo} className="w-[25%] h-full" />
+        <img src={logo} className="sm:w-[30%] md:w-[15%] h-full" />
       </div>
     </div>
   );

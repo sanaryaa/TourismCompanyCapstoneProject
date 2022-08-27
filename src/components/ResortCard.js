@@ -55,7 +55,7 @@ export default function ResortCard() {
         return (
           <div
             key={index}
-            className="w-[70%] border-[0px] flex flex-col rounded-lg  shadow-md"
+            className="w-[70%] border-[0px] flex flex-col rounded-lg  shadow-md hover:shadow-lg"
           >
             <div className="h-[60%] ">
               <Carousel className="w-full h-full ">
@@ -82,7 +82,7 @@ export default function ResortCard() {
                 <button
                   variant="outlined"
                   value={item.id}
-                  className="rudaw-font w-[30%] h-[60%] bg-black text-white flex items-center justify-center rounded-lg text-[20px]"
+                  className="rudaw-font w-[30%] h-[60%] hover:bg-[#C9BBCF] shadow-md hover:shadow-insetShadow bg-[#898AA6]  text-white flex items-center justify-center rounded-lg text-[20px]"
                   onClick={(e) => {
                     handleEvent(e.target.value);
                   }}

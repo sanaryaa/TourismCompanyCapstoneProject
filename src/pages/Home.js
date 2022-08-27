@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import Resort from "./Resort";
 export default function () {
   return (
-    <div className="w-full h-[100vh] flex ">
+    <div className="w-full h-[100vh] flex  ">
       <div className=" lg:w-[45%] h-full bg-white md:w-full sm:w-full  ">
-        <div className="w-full h-[12%] flex items-center justify-center border-2 border-black">
+        <div className="w-full h-[10vh] flex items-center justify-center">
           <Navigation />
         </div>
         <StartSec />
@@ -19,12 +19,12 @@ export default function () {
             <h4 className=" mt-[35%] mr-[15%] rudaw-font w-[60%] text-[35px]  text-white leading-[2.5rem]">
               با چێژ لە پشووەکانمان وەربگرین!
             </h4>
-            <button className="w-[25%] mr-[15%] mt-[5%] h-[5%] backdrop-blur bg-[#80558C] rudaw-font rounded-3xl hover:bg-[#9a7da1]">
+            <button className="w-[25%] mr-[15%] mt-[5%] h-[5%] backdrop-blur rudaw-font rounded-3xl border border-black ">
               <Link
                 to="/Resort"
-                className="no-underline text-white text-[20px]"
+                className="no-underline text-white text-[20px] "
               >
-                زیاتر ببینە
+                دەست پێبکە
               </Link>
             </button>
           </div>

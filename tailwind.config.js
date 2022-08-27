@@ -7,6 +7,7 @@ module.exports = {
         "black-rgba": "rgba(0,0,0,0.1)",
       },
       backgroundImage: {
+        aboutBg:'url("./img/salmas3.jpg")',
         bg1: 'url("./img/bnaryshaxykosrat2.jpg")',
         bg2: 'url("https://images.pexels.com/photos/11924650/pexels-photo-11924650.jpeg?auto=compress&cs=tinysrgb&w=600")',
       },

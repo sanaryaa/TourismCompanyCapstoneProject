@@ -1,6 +1,6 @@
 import React from "react";
 import rawanduz from "../img/rawanduz1.jpg";
-import toranj from "../img/toranj1.jpg";
+import toranj from "../img/salmas3.jpg";
 import rotana from "../img/rotana.jpg";
 import ContactSec from "./ContactSec";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ const content = [
   },
   {
     img: toranj,
-    title: "تۆرەنج کافێ",
+    title: "سەلماس",
     path:'/Retaurant'
   },
  
@@ -35,7 +35,7 @@ const icons=[
 
 export default function StartSec() {
   return (
-    <div className="w-[85%] h-[60%] mx-auto sm:w-full md:w-full ">
+    <div className="w-[85%] h-[60%] mx-auto sm:w-full md:w-full">
       <div className="w-full h-[20%] flex items-center justify-center">
       <input  className="w-[70%] text-black h-[15%] p-[2.5%]  focus:outline-none hover:shadow-insetShadow shadow-md rounded-3xl placeholder:rudaw-font" icon="search" placeHolder="گەڕان.."/>
       </div>
@@ -50,7 +50,7 @@ export default function StartSec() {
             <img src="https://img.icons8.com/ios/50/000000/security-checked.png" className=""/>
           </div>
       </div>
-      <div className="w-full h-[75%] flex items-center justify-around mt-[2%] " >
+      <div className="w-full h-[75%] flex items-center justify-around mt-[10%] " >
        {
         content.map((content)=>{
          return(
@@ -61,9 +61,6 @@ export default function StartSec() {
          )
         })
        }
-      </div>
-      <div className="w-full h-[20%]">
-        <ContactSec/>
       </div>
     </div>
   );

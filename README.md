@@ -1,6 +1,6 @@
 # my project title 
 
-Travel guidelines in Kurdistan
+About a tourism company in Kurdistan This website contains most of the tourist attractions, hotels and restaurants in the three provinces
 
 # libraries I Used:
 

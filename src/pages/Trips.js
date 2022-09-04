@@ -73,11 +73,11 @@ const cardData = [
 ];
 export default function Trips() {
   return (
-    <div className="w-full lg:h-[100%] flex flex-col items-center justify-center">
-      <div className="w-full h-[12vh] flex items-center justify-center ">
+    <div className="w-full h-[322vh] lg:h-[170vh] md:h-[320vh] flex flex-col items-center ">
+      <div className="w-full h-[12vh] flex items-center justify-center  ">
         <Navigation />
       </div>
-      <div className="w-full h-[10%] flex items-center justify-center">
+      <div className="w-full h-[5%] flex items-center justify-center my-[2%]">
         <div className="w-[35%] border-b-2 border-black"> </div>
         <h4 className="m-[2%] rudaw-font text-center"> نوێترین گەشتەکان </h4>
         <div className="w-[35%] border-b-2 border-black"> </div>
@@ -108,7 +108,7 @@ export default function Trips() {
                 <h6 className="rudaw-font text-black  pr-[5%]">
                   بەروار: <span className="text-blue-500"> {data.time} </span>
                 </h6>
-                <h6 className="bg-[#90B77D] text-white text-[20px] w-[30%] sm:w-[35%] lg:h-[20%] md:h-[25%] rounded-tl-2xl rounded-bl-2xl flex items-center justify-center shadow-insetShadow">
+                <h6 className="bg-[#90B77D] text-white rudaw-font text-[20px] w-[30%] sm:w-[30%] lg:h-[17%] md:h-[25%] rounded-tl-2xl rounded-bl-2xl flex items-center justify-center shadow-insetShadow">
                   {data.money}
                 </h6>
               </div>

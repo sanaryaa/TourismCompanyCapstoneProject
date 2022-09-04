@@ -5,7 +5,7 @@ import StartSec from "../components/StartSec";
 import { Link } from "react-router-dom";
 export default function Home () {
   return (
-    <div className="w-full h-[100vh] flex  ">
+    <div className="w-full h-[85vh] lg:h-[100vh] md:h-[120vh] flex  ">
       <div className=" lg:w-[45%] h-full bg-white md:w-full  ">
         <div className="w-full h-[10vh] flex items-center justify-center">
           <Navigation />

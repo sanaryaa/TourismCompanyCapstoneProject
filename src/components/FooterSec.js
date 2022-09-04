@@ -1,7 +1,7 @@
 import ContactSec from "./ContactSec";
 export default function FooterSec() {
   return (
-    <div className="w-full h-[15vh] flex flex-col items-center justify-center mt-[10%] bg-white">
+    <div className="w-full h-[15vh] flex flex-col items-center justify-center">
       <div className="w-full h-[50%] ">
         <ContactSec/>
       </div>

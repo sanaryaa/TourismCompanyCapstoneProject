@@ -1,10 +1,9 @@
 import React from "react";
-import ContactSec from "../components/ContactSec";
+
 import Navigation from "../components/Navigation";
 import StartSec from "../components/StartSec";
 import { Link } from "react-router-dom";
-import Resort from "./Resort";
-export default function () {
+export default function Home () {
   return (
     <div className="w-full h-[100vh] flex  ">
       <div className=" lg:w-[45%] h-full bg-white md:w-full sm:w-full  ">

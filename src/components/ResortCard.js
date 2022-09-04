@@ -1,11 +1,10 @@
 import Carousel from "react-bootstrap/Carousel";
 import { delimiter } from "../util/limit";
 import Modal from "react-modal";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext} from "react";
 import { Context } from "./Filter";
 import Rating from "react-rating";
-import Map from "../components/Map";
-import Button from "@mui/material/Button";
+
 
 export default function ResortCard() {
   //all of the data
@@ -41,7 +40,7 @@ export default function ResortCard() {
 
     //datay aw itema waragre ka clicky lasar krawa
     const selectData = data.filter((items, index) => {
-      return itemId == items.id;
+      return itemId === items.id;
     });
     //selectItem arrayaka ka value selectData waragre u la line y 105 bakary ahenm bo away  pishan bdre la modalakaya
     setItem(selectData[0]);
@@ -112,10 +111,10 @@ export default function ResortCard() {
               direction="rtl"
               initialRating={selectItem.rait}
               emptySymbol={
-                <img src="https://img.icons8.com/color/25/000000/star--v1.png" />
+                <img src="https://img.icons8.com/color/25/000000/star--v1.png" alt="star" />
               }
               fullSymbol={
-                <img src="https://img.icons8.com/fluency/25/000000/star.png" />
+                <img src="https://img.icons8.com/fluency/25/000000/star.png" alt="star" />
               }
               readonly
             />

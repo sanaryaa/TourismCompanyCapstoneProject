@@ -1,6 +1,6 @@
 import Filter from "../components/Filter";
 import Navigation from "../components/Navigation";
-import ResortCard from "../components/ResortCard";
+
 // import ResortCard from "../components/ResortCard";
 
 export default function Resort() {

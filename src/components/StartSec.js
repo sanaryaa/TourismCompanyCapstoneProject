@@ -1,10 +1,7 @@
 import React from "react";
 import rawanduz from "../img/rawanduz1.jpg";
 import toranj from "../img/salmas3.jpg";
-import rotana from "../img/rotana.jpg";
-import ContactSec from "./ContactSec";
-import { Link } from "react-router-dom";
-import Card from 'react-bootstrap/Card';
+
 
 
 const content = [
@@ -44,13 +41,13 @@ export default function StartSec() {
       </div>
       <div className="w-[80%] h-[25%] flex items-center justify-around mx-auto">
           <div className="w-[13%] h-[70%]  flex items-center rounded-md justify-center shadow-md hover:shadow-insetShadow ">
-            <img src="https://img.icons8.com/ios/50/000000/service-bell.png"/>
+            <img src="https://img.icons8.com/ios/50/000000/service-bell.png" alt="img"/>
           </div>
           <div className="w-[13%] h-[70%]  flex items-center rounded-md justify-center shadow-md hover:shadow-insetShadow ">
-            <img src="https://img.icons8.com/ios/50/000000/trust--v1.png"/>
+            <img src="https://img.icons8.com/ios/50/000000/trust--v1.png" alt="img"/>
           </div>
           <div className="w-[13%] h-[70%] flex items-center rounded-md justify-center shadow-md hover:shadow-insetShadow">
-            <img src="https://img.icons8.com/ios/50/000000/security-checked.png" className=""/>
+            <img src="https://img.icons8.com/ios/50/000000/security-checked.png" alt="img" className=""/>
           </div>
       </div>
       <div className="w-full h-[75%] flex items-center justify-around mt-[10%] " >
@@ -58,7 +55,7 @@ export default function StartSec() {
         content.map((content,index)=>{
          return(
           <div key={index} className="Card w-[35%] h-full rounded-md shadow-md hover:shadow-lg">
-          <img src={content.img}  className=" rounded-tl-md rounded-tr-md"/>
+          <img src={content.img} alt="img"  className=" rounded-tl-md rounded-tr-md"/>
           <h6 className="w-full rudaw-font pt-[1%] text-black bg-white text-[20px] text-center flex items-center justify-center">{content.title}</h6>
         </div>
          )

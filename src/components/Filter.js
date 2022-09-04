@@ -25,11 +25,9 @@ import darbandixan2 from "../img/darbandixan2.jpg";
 import dolibalisan1 from "../img/dolibalisan1.jpg";
 import dolibalisan2 from "../img/dolibalisan2.jpg";
 import dolibalisan3 from "../img/dolibalisan3.jpg";
-import dolibalisan4 from "../img/dolibalisan4.jpg";
 import dolialan1 from "../img/dollialan1.jpg";
 import dolialan2 from "../img/dollialan2.jpg";
 import dollialan3 from "../img/dollialan4.jpg";
-import dollialan4 from "../img/dollialan5.jpg";
 import dukan1 from "../img/dukan1.jpg";
 import dukan2 from "../img/dukan2.jpg";
 import tabin1 from "../img/dukan-tabin1.jpg";
@@ -356,13 +354,13 @@ export default function Filter() {
   const [data, setData] = useState(resort);
 
   const filter = (button) => {
-    if (button == "all") {
+    if (button === "all") {
       setData(resort);
       return;
     }
 
     const filteredData = resort.filter(
-      (dataList) => dataList.location == button
+      (dataList) => dataList.location === button
     );
     setData(filteredData);
   };

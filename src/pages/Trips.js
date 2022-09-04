@@ -1,6 +1,5 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import akre from "../img/akre3.jpg";
 import rawanduz from "../img/rawanduz6.jpg";
 import biara from "../img/biara1.jpg";
 import sakran from "../img/sakran1.jpg";
@@ -90,6 +89,7 @@ export default function Trips() {
               <div className="w-[40%] h-full bg-white">
                 <div className="w-[95%] h-full rounded-bl-[20px] rounded-tl-[20px]">
                   <img
+                  alt="img"
                     src={data.img}
                     className="img w-full h-full object-cover rounded-tr-lg rounded-tb-lg rounded-bl-[20px] rounded-tl-[20px]"
                   />

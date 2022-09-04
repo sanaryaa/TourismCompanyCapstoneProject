@@ -12,7 +12,7 @@ export default function ResortCard() {
   //variable store that datas which is filtered
   const [selectItem, setItem] = useState([]);
 
-  let subtitle;
+ 
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const customStyle = {

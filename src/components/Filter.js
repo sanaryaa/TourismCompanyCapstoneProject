@@ -75,7 +75,7 @@ import sirwan2 from "../img/sirwan2.jpg";
 import taqtaq1 from "../img/taqtaq1.jpg";
 import taqtaq2 from "../img/taqtaq2.jpg";
 import chamirezan1 from "../img/chamirezan1.jpg";
-import chamirezan2 from "../img/chamirezan2.jpg";
+
 
 const resort = [
   {

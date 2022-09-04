@@ -3,11 +3,10 @@ import Navigation from "../components/Navigation";
 export default function About() {
   return (
     <div className="w-full h-[100vh]">
-      <div className="w-full h-[12vh] flex items-center justify-center ">
+      <div className="w-full h-[12vh] flex items-center justify-center fixed top-[-1]">
         <Navigation />
       </div>
-      
-      <div className="w-full h-[35%]  flex items-center justify-center gap-[2%]">
+      <div className="w-full h-[35%]  flex items-center justify-center gap-[2%] mt-[3%]">
         <div className="w-[30%] h-full  hover:w-[31%] rounded-3xl  bg-raniaBg bg-center bg-cover  bg-no-repeat shadow-md">
           <div className="w-full h-full rounded-3xl bg-black-rgba flex  justify-start items-end">
           <h6 className="rudaw-font text-white text-center lg:text-[30px] md:text-[28%]  mr-[5%] mb-[5%]">ڕانیە</h6>

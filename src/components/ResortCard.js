@@ -15,14 +15,12 @@ export default function ResortCard() {
 
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
-  
 
   const customStyle = {
     content: {
       width: "75vw",
       background: "white",
-      marginRight: "5%",
-      marginLeft: "5%",
+      margin: "0 auto",
       borderRadius: "20px",
     },
     overlay: {
@@ -30,14 +28,14 @@ export default function ResortCard() {
     },
   };
 
- //first Modal:
+  //first Modal:
   function openModal() {
     setIsOpen(true);
   }
   function closeModal() {
     setIsOpen(false);
   }
- 
+
   function handleEvent(itemId) {
     openModal();
 
@@ -45,9 +43,8 @@ export default function ResortCard() {
     const selectData = data.filter((items, index) => {
       return itemId == items.id;
     });
-    //selectItem arrayaka ka value selectData waragre u la line y 112 bakary ahenm bo away  pishan bdre la modalakaya
+    //selectItem arrayaka ka value selectData waragre u la line y 105 bakary ahenm bo away  pishan bdre la modalakaya
     setItem(selectData[0]);
-    console.log(selectItem.toString());
   }
   return (
     <div className="w-full h-[100%] justify-items-center  grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-[2%] ">
@@ -55,15 +52,15 @@ export default function ResortCard() {
         return (
           <div
             key={index}
-            className="w-[70%] border-[0px] flex flex-col rounded-lg  shadow-md hover:shadow-lg"
+            className="w-[70%] border-[0px] flex flex-col rounded-lg shadow-md hover:shadow-lg"
           >
-            <div className="h-[60%] ">
-              <Carousel className="w-full h-full ">
-                {item.img.map((img, index) => {
+            <div  className="h-[60%] ">
+              <Carousel className="w-full h-full mb-[10%] " >
+                {item.img.map((img, imgIndex) => {
                   return (
-                    <Carousel.Item>
+                    <Carousel.Item key={imgIndex} >
                       <img
-                        key={index}
+                     
                         className=" w-100 rounded-tl-lg rounded-tr-lg"
                         src={img}
                         alt="First slide"
@@ -73,7 +70,7 @@ export default function ResortCard() {
                 })}
               </Carousel>
             </div>
-            <div className="w-full h-[40%]  p-[4%] mt-[15%]">
+            <div className="w-full h-[40%]  p-[4%] mt-[15%] ">
               <h2 className="rudaw-font text-[20px]">{item.name}</h2>
               <p className="rudaw-font text-[#69787d]">
                 {delimiter(item.description, 55)}
@@ -100,26 +97,11 @@ export default function ResortCard() {
         style={customStyle}
       >
         <button onClick={closeModal}>
-          <img src="https://img.icons8.com/ios/25/000000/delete-sign--v1.png" />
+          <img src="https://img.icons8.com/ios/25/000000/delete-sign--v1.png" alt="img"/>
         </button>
-        <div className="w-full lg:h-[120vh] md:h-[110vh] sm:h-[90%] flex flex-col items-center justify-center">
+        <div className="w-full lg:h-[110vh] md:h-[100vh] sm:h-[90%] flex flex-col items-center justify-center">
           <div className="w-[95%] h-[60%]  rounded-3xl bg-white flex items-center justify-center">
-            
-            {/* <Carousel className="lg:w-[40%] md:w-[50%] sm:w-[55%] ">
-              {selectItem.img.map((img, index) => {
-                return (
-                  <Carousel.Item>
-                    <img
-                      key={index}
-                      className=" w-100 rounded-lg"
-                      src={img}
-                      alt="First slide"
-                    />
-                  </Carousel.Item>
-                );
-              })}
-            </Carousel> */}
-          
+            {/* <Map IP={selectItem.long}/> */}
           </div>
           <div className="w-[95%] h-[35%] p-[5%]  flex flex-col items-center justify-center text-center">
             <h4 className="rudaw-font text-[25px]">{selectItem.name}</h4>

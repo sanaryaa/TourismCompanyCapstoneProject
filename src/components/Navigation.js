@@ -9,19 +9,23 @@ const pages = [
   {
     page: "https://img.icons8.com/ios-glyphs/27/000000/home.png",
     path: "/",
+    id:'1'
   },
   {
     page: "https://img.icons8.com/ios-glyphs/27/000000/beach.png",
     path: "/Resort",
+    id:'2'
   },
   {
     page: "https://img.icons8.com/ios-filled/27/000000/travel-card.png",
-    path: "/Hotel",
+    path: "/Trips",
+    id:'3'
   },
   
   {
     page: "https://img.icons8.com/ios-glyphs/27/000000/about.png",
     path: "/About",
+    id:'4'
   },
 ];
 const Style={
@@ -52,8 +56,8 @@ function Navigation() {
           <div className="w-full h-[50%] flex flex-col items-center justify-around mt-[70%]">
             {pages.map((page, index) => {
               return (
-                <Link to={page.path} className=" bg-white rounded-[50%] lg:p-[7%] md:p-[5%] sm:p-[10%] sm:hover:p-[15%]">
-                  <img src={page.page} />
+                <Link to={page.path} key={page.id} className=" bg-white rounded-[50%] lg:p-[7%] md:p-[5%] sm:p-[10%] sm:hover:p-[15%]">
+                  <img src={page.page}  />
                 </Link>
               );
             })}

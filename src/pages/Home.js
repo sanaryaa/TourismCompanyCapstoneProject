@@ -19,15 +19,16 @@ export default function () {
             <h4 className=" mt-[35%] mr-[15%] rudaw-font w-[60%] text-[35px]  text-white leading-[2.5rem]">
               با چێژ لە پشووەکانمان وەربگرین!
             </h4>
-            <button className="w-[25%] mr-[15%] mt-[5%] h-[5%] backdrop-blur rudaw-font rounded-3xl border border-black ">
+            <button className="w-[25%] mr-[15%] mt-[5%] h-[6%]  backdrop-blur rudaw-font rounded-3xl border border-black ">
               <Link
                 to="/Resort"
-                className="no-underline text-white text-[20px] "
+                className="no-underline text-white text-[20px]  "
               >
                 دەست پێبکە
               </Link>
             </button>
           </div>
+          
         </div>
       </div>
     </div>

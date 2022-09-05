@@ -7,23 +7,23 @@ import { useState } from "react";
 
 const pages = [
   {
-    page: "https://img.icons8.com/ios-glyphs/27/000000/home.png",
+    page: "https://img.icons8.com/ios-glyphs/30/000000/home.png",
     path: "/",
     id:'1'
   },
   {
-    page: "https://img.icons8.com/ios-glyphs/27/000000/beach.png",
+    page: "https://img.icons8.com/ios-glyphs/30/000000/beach.png",
     path: "/Resort",
     id:'2'
   },
   {
-    page: "https://img.icons8.com/ios-filled/27/000000/travel-card.png",
+    page: "https://img.icons8.com/ios-filled/30/000000/travel-card.png",
     path: "/Trips",
     id:'3'
   },
   
   {
-    page: "https://img.icons8.com/ios-glyphs/27/000000/about.png",
+    page: "https://img.icons8.com/ios-glyphs/30/000000/about.png",
     path: "/About",
     id:'4'
   },

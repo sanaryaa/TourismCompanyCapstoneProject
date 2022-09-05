@@ -4,7 +4,7 @@ import Modal from "react-modal";
 import React, { useState, useContext} from "react";
 import { Context } from "./Filter";
 import Rating from "react-rating";
-
+import Map from './Map'
 
 export default function ResortCard() {
   //all of the data
@@ -96,12 +96,10 @@ export default function ResortCard() {
         style={customStyle}
       >
         <button onClick={closeModal}>
-          <img src="https://img.icons8.com/ios/25/000000/delete-sign--v1.png" alt="img"/>
+          <img src="https://img.icons8.com/ios/25/000000/delete-sign--v1.png" alt="img" className="bg-transparent"/>
         </button>
         <div className="w-full lg:h-[110vh] md:h-[100vh] sm:h-[90%] flex flex-col items-center justify-center">
-          <div className="w-[95%] h-[60%]  rounded-3xl bg-white flex items-center justify-center">
-            {/* <Map IP={selectItem.long}/> */}
-          </div>
+          
           <div className="w-[95%] h-[35%] p-[5%]  flex flex-col items-center justify-center text-center">
             <h4 className="rudaw-font text-[25px]">{selectItem.name}</h4>
             <p className="rudaw-font text-[17px] w-[75%] mt-[5%] text-[#73777B]">
@@ -118,6 +116,10 @@ export default function ResortCard() {
               }
               readonly
             />
+          </div>
+          <div className="w-[95%] h-[60%]  rounded-3xl bg-white flex items-center justify-center">
+           <Map IP={selectItem.long} name={selectItem.name}/>
+           {/* {console.log(selectItem.long)} */}
           </div>
         </div>
       </Modal>

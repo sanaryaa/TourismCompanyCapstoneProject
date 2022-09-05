@@ -1,5 +1,4 @@
 import React from "react";
-
 import Navigation from "../components/Navigation";
 import StartSec from "../components/StartSec";
 import { Link } from "react-router-dom";
@@ -15,12 +14,12 @@ export default function Home () {
       <div className=" w-[55%] h-full bg-white hidden md:hidden lg:block">
         <div className=" w-full h-full bg-bg1 bg-no-repeat bg-cover bg-bottom rounded-tr-[10%] rounded-br-[10%] ">
           <div className="w-full h-full rounded-tr-[10%] rounded-br-[10%]  bg-black-rgba flex flex-col items-start">
-            <h4 className=" mt-[35%] mr-[15%] rudaw-font w-[60%] text-[35px]  text-white leading-[2.5rem]">
+            <h4 className=" mt-[35%] mr-[15%] rudaw-font w-[60%] text-[35px]  text-white leading-[2.5rem] ">
               با چێژ لە پشووەکانمان وەربگرین!
             </h4>
-            <button className="w-[25%] mr-[15%] mt-[5%] h-[6%]  backdrop-blur rudaw-font rounded-3xl border border-black ">
+            <button className="w-[25%] mr-[15%] mt-[5%] h-[6%]  backdrop-blur rudaw-font rounded-3xl border-[1px] border-white hover:border-[2px]">
               <Link
-                to="/Resort"
+                to="/Trips"
                 className="no-underline text-white text-[20px]  "
               >
                 دەست پێبکە

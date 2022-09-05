@@ -1,7 +1,7 @@
 import React from "react";
 import rawanduz from "../img/rawanduz1.jpg";
 import toranj from "../img/salmas3.jpg";
-
+import { Link } from "react-router-dom";
 const content = [
   {
     img: rawanduz,
@@ -11,7 +11,7 @@ const content = [
   {
     img: toranj,
     title: "سەلماس",
-    path: "/Retaurant",
+    path: "/Resort",
   },
 ];
 
@@ -31,7 +31,7 @@ export default function StartSec() {
             src="https://img.icons8.com/ios/25/000000/trust--v1.png"
             alt="img"
           />
-           <span className="rudaw-font text-black text-[20px] ">متمانە</span>
+          <span className="rudaw-font text-black text-[20px] ">متمانە</span>
         </div>
         <div className="w-[25%] p-[2%] flex items-center rounded-[70px]  justify-around  shadow-md hover:shadow-insetShadow">
           <img
@@ -39,25 +39,24 @@ export default function StartSec() {
             alt="img"
             className=""
           />
-          <span  className="rudaw-font text-black text-[20px] ">ئاسایش</span>
+          <span className="rudaw-font text-black text-[20px] ">ئاسایش</span>
         </div>
       </div>
-      <div className="w-full h-[74%] md:h-[40%] lg:h-[75%] flex items-center justify-around  mt-[0]">
+      <div className="w-full h-[74%]  md:h-[40%] lg:h-[75%] flex items-center justify-around  mt-[0]  ">
         {content.map((content, index) => {
           return (
-            <div
-              key={index}
-              className="Card m-[5%] h-full rounded-md "
-            >
-              <img
-                src={content.img}
-                alt="img"
-                className=" rounded-tl-md rounded-tr-md"
-              />
-              <h6 className="w-full rudaw-font pt-[1%] text-black bg-white text-[20px] text-center flex items-center justify-center  shadow-md hover:shadow-lg">
-                {content.title}
-              </h6>
-            </div>
+            <Link to={content.path} className="w-full h-full no-underline">
+              <div key={index} className="Card m-[5%] h-full rounded-md ">
+                <img
+                  src={content.img}
+                  alt="img"
+                  className=" rounded-tl-md rounded-tr-md"
+                />
+                <h6 className="w-full rudaw-font pt-[1%] text-black bg-white text-[20px] text-center flex items-center justify-center  shadow-md hover:shadow-lg">
+                  {content.title}
+                </h6>
+              </div>
+            </Link>
           );
         })}
       </div>

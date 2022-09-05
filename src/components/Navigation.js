@@ -53,10 +53,10 @@ function Navigation() {
           direction="right"
           style={Style}
         >
-          <div className="w-full h-[55%] flex flex-col items-center justify-around mt-[70%]">
+          <div className="w-full h-[55%]  flex flex-col items-center justify-around mt-[70%]">
             {pages.map((page, index) => {
               return (
-                <Link to={page.path} key={page.id} className=" bg-white rounded-[50%]  p-[10%] lg:p-[7%] md:p-[5%] ">
+                <Link to={page.path} key={page.id} className=" bg-white rounded-[50%]  p-[10%] lg:p-[7%] md:p-[5%] hover:p-[10%] ">
                   <img src={page.page} alt="img"  />
                 </Link>
               );

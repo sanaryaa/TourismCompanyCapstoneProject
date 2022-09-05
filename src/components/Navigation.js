@@ -7,23 +7,23 @@ import { useState } from "react";
 
 const pages = [
   {
-    page: "https://img.icons8.com/ios-glyphs/30/000000/home.png",
+    page: "https://img.icons8.com/ios-glyphs/32/000000/home.png",
     path: "/",
     id:'1'
   },
   {
-    page: "https://img.icons8.com/ios-glyphs/30/000000/beach.png",
+    page: "https://img.icons8.com/ios-glyphs/32/000000/beach.png",
     path: "/Resort",
     id:'2'
   },
   {
-    page: "https://img.icons8.com/ios-filled/30/000000/travel-card.png",
+    page: "https://img.icons8.com/ios-filled/32/000000/travel-card.png",
     path: "/Trips",
     id:'3'
   },
   
   {
-    page: "https://img.icons8.com/ios-glyphs/30/000000/about.png",
+    page: "https://img.icons8.com/ios-glyphs/32/000000/about.png",
     path: "/About",
     id:'4'
   },
@@ -53,10 +53,10 @@ function Navigation() {
           direction="right"
           style={Style}
         >
-          <div className="w-full h-[50%] flex flex-col items-center justify-around mt-[70%]">
+          <div className="w-full h-[55%] flex flex-col items-center justify-around mt-[70%]">
             {pages.map((page, index) => {
               return (
-                <Link to={page.path} key={page.id} className=" bg-white rounded-[50%] lg:p-[7%] md:p-[5%] sm:p-[10%] sm:hover:p-[15%]">
+                <Link to={page.path} key={page.id} className=" bg-white rounded-[50%]  p-[10%] lg:p-[7%] md:p-[5%] ">
                   <img src={page.page} alt="img"  />
                 </Link>
               );

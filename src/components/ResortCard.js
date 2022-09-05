@@ -100,7 +100,7 @@ export default function ResortCard() {
         </button>
         <div className="w-full lg:h-[110vh] md:h-[100vh] sm:h-[90%] flex flex-col items-center justify-center">
           
-          <div className="w-[95%] h-[35%] p-[5%]  flex flex-col items-center justify-center text-center">
+          <div className="w-[95%] h-[35%] p-[5%]  flex flex-col items-start justify-center text-end">
             <h4 className="rudaw-font text-[25px]">{selectItem.name}</h4>
             <p className="rudaw-font text-[17px] w-[75%] mt-[5%] text-[#73777B]">
               {selectItem.description}

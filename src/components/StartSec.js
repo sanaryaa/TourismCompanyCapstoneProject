@@ -34,12 +34,14 @@ export default function StartSec() {
           <span className="rudaw-font text-black text-[20px] ">متمانە</span>
         </div>
         <div className="w-[25%] p-[2%] flex items-center rounded-[70px]  justify-around  shadow-md hover:shadow-insetShadow">
-          <img
+          <Link to='/Restaurant' className="w-full h-full flex items-center rounded-[70px]  justify-around no-underline">
+          <img 
             src="https://img.icons8.com/ios/25/000000/security-checked.png"
             alt="img"
             className=""
           />
           <span className="rudaw-font text-black text-[20px] ">ئاسایش</span>
+          </Link>
         </div>
       </div>
       <div className="w-full h-[74%]  md:h-[40%] lg:h-[75%] flex items-center justify-around  mt-[0]  ">

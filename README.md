@@ -1,6 +1,6 @@
 # my project title 
 
-About a tourism company in Kurdistan This website contains most of the tourist attractions, hotels and restaurants in the three provinces
+About a tourism company in Kurdistan This website contains most of the tourist attractions ,and list of trips.
 
 # libraries I Used:
 
